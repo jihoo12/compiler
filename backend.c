@@ -1,2 +1,2 @@
-#define syscall 0F05
-#define leave C9
+#define syscall 0x0F05
+#define leave 0xC9
