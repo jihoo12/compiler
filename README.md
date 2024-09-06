@@ -1,2 +1,2 @@
-# spaceC
-spaceC programming language 
+# compiler 
+compiler programming language 
