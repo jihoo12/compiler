@@ -1,0 +1,17 @@
+rax rax C0
+rax rcx C1
+rax rdx C2
+rax rbx C3
+rax rsp C4
+rax rbp C5
+rax rsi C6
+rax rdi C7
+rcx rax C8
+rcx rcx C9
+rcx rdx CA
+rcx rbx CB
+rcx rsp CC
+rcx rbp CD
+rcx rsi CE
+rcx rdi CF
+
