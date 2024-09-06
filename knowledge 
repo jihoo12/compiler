@@ -14,4 +14,7 @@ rcx rsp CC
 rcx rbp CD
 rcx rsi CE
 rcx rdi CF
-
+rdx rax D0
+rdx rcx D1
+rdx rdx D2
+rdx rbx D3
