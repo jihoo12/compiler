@@ -8,12 +8,12 @@ private:
   char init[4] = {0x55,(char)0x48,(char)0x89,(char)0xE5};
   char ret = 0xC3;
 public:
-  inline void movregreg(char num) {
+  void movregreg(char num) {
     out.push_back(0x48);
     out.push_back(0x89);
     out.push_back(0xC0 | num);
   }
-  inline void complexmovregreg(char dest_reg, char src_reg, int32_t disp = 0, bool dest_is_mem = false) {
+  void complexmovregreg(char dest_reg, char src_reg, int32_t disp = 0, bool dest_is_mem = false) {
     out.push_back(0x48);  // REX.W prefix for 64-bit operands
 
     if (dest_is_mem) {
@@ -36,7 +36,7 @@ public:
       }
     }
   }
-  inline void movreg(char imm[4],char reg) {
+  void movreg(char imm[4],char reg) {
     out.push_back(0x48);
     out.push_back(0xC7);
     out.push_back(0xC0 | reg);
@@ -45,7 +45,40 @@ public:
     out.push_back(imm[2]);
     out.push_back(imm[3]);
   }
-  inline void subregimm(char reg, const char imm[], int immsize) {
+  void sub(char imm1,char imm2,int ismem,char dist) {
+    switch(ismem) {
+    case 0:
+      out.push_back(0x48);
+      out.push_back(0x29);
+      out.push_back(0xC0 | (imm1 | 8*imm2));
+      //reg,reg
+      break;
+    case 1:
+      //reg,imm
+      out.push_back(0x48);
+      out.push_back(0xE8 | imm1);
+      out.push_back(imm2);
+      break;
+    case 2:
+      if (dist > 0) {
+	
+      }else {
+	
+      }
+      //mem,imm
+      break;
+    case 3:
+      //mem,reg
+      break;
+    case 4:
+      //reg,mem
+      break;
+    default:
+      //mem,mem
+      
+    }
+  }
+  void subregimm(char reg, const char imm[], int immsize) {
     out.push_back(0x48);
     if (immsize == 1) {
       out.push_back(0x83);  // SUB r/m64, imm8
