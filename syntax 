@@ -1,4 +1,4 @@
-a > b ### if a true run b
+a > b ### if a is true then run b
 > a  ### run a
 a == b ### a-b for compare a and b 
 a >> b ### mov a ,b
