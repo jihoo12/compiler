@@ -6,3 +6,5 @@ a == b a-b for compare a and b
 a >> b mov a ,b
 "" string
 . syscall
+a >> @ push a
+@ >> a pop a
