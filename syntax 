@@ -9,3 +9,7 @@ a >> @ ### push a
 %a ### a memory address 
 .a ### call a
 < ### ret
+a + b ### addition
+a - b ### subtraction
+a * b ### multiplication
+a / b ### division
