@@ -1,0 +1,12 @@
+rbp >> @
+rsp >> rbp
+rsp-16
+"hello" >> %rbp-5
+1 >> rax
+1 >> rdi
+%rbp-5 >> rsi
+5 >> rdx
+.
+rbp >> rsp
+@ >> rbp
+###print hello
