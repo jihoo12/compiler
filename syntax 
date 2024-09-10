@@ -13,3 +13,4 @@ a + b ### addition
 a - b ### subtraction
 a * b ### multiplication
 a / b ### division
+!a run a (a is machine code)
