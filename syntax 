@@ -1,0 +1,8 @@
+! if false
+? if true
+a > b if a true run b
+> b run b
+a == b a-b for compare a and b 
+a >> b mov a ,b
+"" string
+. syscall
