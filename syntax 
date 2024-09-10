@@ -1,5 +1,3 @@
-! if false
-? if true
 a > b if a true run b
 > b run b
 a == b a-b for compare a and b 
@@ -8,3 +6,5 @@ a >> b mov a ,b
 . syscall
 a >> @ push a
 @ >> a pop a
+%a a memory address 
+.a call a
