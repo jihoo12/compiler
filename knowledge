@@ -3,3 +3,4 @@ example
 rax,rax C0
 rcx ,rax C1
 first register+ 8*second register 
+[reg+a] it seems like start 40 not C0
