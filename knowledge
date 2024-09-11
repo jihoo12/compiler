@@ -1,0 +1,5 @@
+general modR/M reg-reg
+example 
+rax,rax C0
+rcx ,rax C1
+first register+ 8*second register 
