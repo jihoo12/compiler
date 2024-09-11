@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
     inFile.close();
     for (int i=0;i<chars.size()) {
         switch (chars[i]) {
-           
+	  
         }
     }
     std::cout << std::endl;

@@ -8,6 +8,15 @@ private:
   char init[4] = {0x55,(char)0x48,(char)0x89,(char)0xE5};
   char ret = 0xC3;
 public:
+  void modrm(char base,char index=0,char scale=0,char displacement=0,char dist,char num = 0) {
+    if (index != 0 && scale != 0 && displacement != 0) {
+      if (num = != 0) {
+	out.push_back(0xC0 | (base+8*dist));
+      }else {
+	
+      }
+    }
+  }
   void movregreg(char num) {
     out.push_back(0x48);
     out.push_back(0x89);
