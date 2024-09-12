@@ -1,3 +1,4 @@
+//need code formatting 
 #include <vector>
 #include <cstdint>
 class Backend {
@@ -15,18 +16,10 @@ public:
     char displacement = 0;
     char dist;
     char num = 0;
+    bool isimm = 0;
   };
-
+//need update 
 void modrm(const ModRMParams& params) {
-    if (params.index != 0 && params.scale != 0 && params.displacement != 0) {
-        // SIB
-        if (params.num != 0) {
-            // common modr/m
-        } else {
-            // not SIB
-            // but it uses memory address
-        }
-    }
 }
   void movregreg(char num) {
     out.push_back(0x48);
@@ -65,6 +58,7 @@ void modrm(const ModRMParams& params) {
     out.push_back(imm[2]);
     out.push_back(imm[3]);
   }
+//need update 
   void sub(char imm1,char imm2,int ismem,char dist) {
     switch(ismem) {
     case 0:
