@@ -8,18 +8,26 @@ private:
   char init[4] = {0x55,(char)0x48,(char)0x89,(char)0xE5};
   char ret = 0xC3;
 public:
-  void modrm(char base,char index=0,char scale=0,char displacement=0,char dist,char num = 0) {
-    if (index != 0 && scale != 0 && displacement != 0) {
-//sib
-      if (num != 0) {
-//common modr/m 
-      }else {
-//not sib
-//but it use memory address 
+  struct ModRMParams {
+    char base;
+    char index = 0;
+    char scale = 0;
+    char displacement = 0;
+    char dist;
+    char num = 0;
+  };
 
-      }
+void modrm(const ModRMParams& params) {
+    if (params.index != 0 && params.scale != 0 && params.displacement != 0) {
+        // SIB
+        if (params.num != 0) {
+            // common modr/m
+        } else {
+            // not SIB
+            // but it uses memory address
+        }
     }
-  }
+}
   void movregreg(char num) {
     out.push_back(0x48);
     out.push_back(0x89);
