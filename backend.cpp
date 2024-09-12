@@ -10,10 +10,13 @@ private:
 public:
   void modrm(char base,char index=0,char scale=0,char displacement=0,char dist,char num = 0) {
     if (index != 0 && scale != 0 && displacement != 0) {
-      if (num = != 0) {
-	out.push_back(0xC0 | (base+8*dist));
+//sib
+      if (num != 0) {
+//common modr/m 
       }else {
-	
+//not sib
+//but it use memory address 
+
       }
     }
   }
