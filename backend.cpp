@@ -17,10 +17,23 @@ public:
     char displacement = 0;
     char dist;
     char num = 0;
-    bool isimm = 0;
+    int option = 0;
+    /*
+      option:
+      0 reg-reg
+      1 reg-imm
+      2 reg-memoryaddress
+      3 reg-sib
+      4 memoryaddress-reg
+      5 memoryaddress-imm
+      6 sib-reg
+      7 sib-imm
+     */
   };
   // need update
-  void modrm(const ModRMParams &params) {}
+  void modrm(const ModRMParams &params) {
+    
+  }
   void movregreg(char num) {
     out.push_back(0x48);
     out.push_back(0x89);
